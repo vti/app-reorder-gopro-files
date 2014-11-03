@@ -42,6 +42,8 @@
       },
       "runtime" : {
          "requires" : {
+            "Docopt" : "0",
+            "File::Copy" : "0",
             "perl" : "5.008001"
          }
       },
@@ -52,6 +54,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/vti/app-reorder-gopro-files/issues"
+      },
+      "homepage" : "https://github.com/vti/app-reorder-gopro-files",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/vti/app-reorder-gopro-files.git",
+         "web" : "https://github.com/vti/app-reorder-gopro-files"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:VTI"
 }
