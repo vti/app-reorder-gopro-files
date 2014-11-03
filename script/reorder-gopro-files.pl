@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use Docopt;
+use File::Copy ();
 
 my $opts = docopt();
 
