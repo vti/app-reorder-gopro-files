@@ -33,7 +33,7 @@ foreach my $file (@$files) {
 sub _copy {
     my ($old_file, $new_file) = @_;
 
-    my ($text, $action) = ('Symlinking', \&symlink);
+    my ($text, $action) = ('Symlinking', \&_symlink);
     ($text, $action) = ('Copying', \&File::Copy::copy)
       if $opts->{'-c'} || $opts->{'--copy'};
     ($text, $action) = ('Moving', \&File::Copy::move)
@@ -41,6 +41,12 @@ sub _copy {
 
     warn "$text '$old_file' to '$new_file'\n";
     $action->($old_file, $new_file) if $force;
+}
+
+sub _symlink {
+    my ($from, $to) = @_;
+
+    symlink $from, $to;
 }
 
 1;
